@@ -1,4 +1,4 @@
-package mikhail.shell.security.education.server
+package mikhail.shell.education.security.server
 
 import java.math.BigInteger
 import java.security.SecureRandom
