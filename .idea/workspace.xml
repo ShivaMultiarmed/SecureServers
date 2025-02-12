@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12e590b3-a163-4167-bb71-68506852a43e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/BaseServer.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/DFServer.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/MQVServer.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/DFIServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/DFIServer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/Functions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/Functions.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/Server.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/Server.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +44,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "ktor",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Магистратура/2 семестр/Перспективные технологии защиты информации/Practice 1/SecureClient"
+    "last_opened_file_path": "D:/Магистратура/2 семестр/Перспективные технологии защиты информации/Practice 1/Security-Methods"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

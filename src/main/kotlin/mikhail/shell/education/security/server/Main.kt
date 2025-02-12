@@ -12,7 +12,7 @@ fun main(args: Array<String>) {
     val server: BaseServer = when(type) {
         Protocol.DEFFIE_HELLMAN -> DFServer()
         Protocol.DEFFIE_HELLMAN_IMPROVED -> DFIServer()
-        else -> DFServer()
+        else -> MQVServer()
     }
     server.start()
 }
