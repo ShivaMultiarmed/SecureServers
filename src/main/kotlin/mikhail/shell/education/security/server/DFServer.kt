@@ -6,15 +6,14 @@ import io.ktor.server.netty.*
 import io.ktor.server.routing.*
 import io.ktor.server.websocket.*
 import io.ktor.websocket.*
-import java.math.BigInteger
 import java.time.Duration
 
-class DFIServer: BaseServer() {
-    private val q: BigInteger = generatePrime(256)
+class DFServer: BaseServer() {
     init {
-        p = generateSafePrime(q)
-        g = findGenerator(p, q)
+        p = generatePrime(1024)
+        g = findGenerator(p)
     }
+
     override fun start() {
         embeddedServer(Netty, port = 9876) {
             install(WebSockets.Plugin) {
@@ -24,7 +23,6 @@ class DFIServer: BaseServer() {
                 webSocket("/handshake") {
                     val clientName = (incoming.receive() as Frame.Text).readText()
                     if (clientName == "ALICE") {
-                        sendNumber(q)
                         sendNumber(p)
                         sendNumber(g)
 
@@ -33,7 +31,6 @@ class DFIServer: BaseServer() {
                         Y = bobKeyDeferred.await()
                         sendNumber(Y!!)
                     } else if (clientName == "BOB") {
-                        sendNumber(q)
                         sendNumber(p)
                         sendNumber(g)
 

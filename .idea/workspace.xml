@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12e590b3-a163-4167-bb71-68506852a43e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/DFIServer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/BaseServer.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/DFServer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/DFIServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/DFIServer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/Functions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/Functions.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/Server.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/Server.kt" afterDir="false" />
     </list>
@@ -18,6 +21,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -39,6 +43,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.Build SecureServer.executor": "Run",
+    "Kotlin.MainKt.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "ktor",
     "kotlin-language-version-configured": "true",

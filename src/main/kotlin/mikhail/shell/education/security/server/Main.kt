@@ -4,12 +4,16 @@ fun main(args: Array<String>) {
     var type = Protocol.DEFFIE_HELLMAN
     for (i in 0..<args.size) {
         when (args[i]) {
-            "--dh" -> type = Protocol.DEFFIE_HELLMAN
+            "--df" -> type = Protocol.DEFFIE_HELLMAN
             "--dfi" -> type = Protocol.DEFFIE_HELLMAN_IMPROVED
             "--mqv" -> type = Protocol.MQV
         }
     }
-    val server: Server = DFIServer()
+    val server: BaseServer = when(type) {
+        Protocol.DEFFIE_HELLMAN -> DFServer()
+        Protocol.DEFFIE_HELLMAN_IMPROVED -> DFIServer()
+        else -> DFServer()
+    }
     server.start()
 }
 enum class Protocol {

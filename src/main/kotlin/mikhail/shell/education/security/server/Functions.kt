@@ -48,3 +48,22 @@ fun findGenerator(p: BigInteger, q: BigInteger): BigInteger {
     }
     throw RuntimeException("Не удалось найти генератор циклической подгруппы порядка q за $maxAttempts попыток")
 }
+fun findGenerator(p: BigInteger): BigInteger {
+    val one = BigInteger.ONE
+    val two = BigInteger.TWO
+    // Вычисляем q = (p - 1) / 2
+    val q = p - one / two
+
+    var g = two
+    // Перебираем кандидатов g от 2 до p-1
+    while (g < p) {
+        // Проверяем оба условия:
+        // 1. g^q mod p != 1 (исключаем порядок, делящий q)
+        // 2. g^2 mod p != 1 (исключаем порядок 2)
+        if (g.modPow(q, p) != one && g.modPow(two, p) != one) {
+            return g
+        }
+        g += one
+    }
+    throw RuntimeException("Не удалось найти примитивный корень для p = $p")
+}
