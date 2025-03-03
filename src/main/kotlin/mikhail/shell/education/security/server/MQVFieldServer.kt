@@ -10,7 +10,7 @@ import kotlinx.coroutines.CompletableDeferred
 import java.math.BigInteger
 import java.time.Duration
 
-class MQVServer: BaseServer() {
+class MQVFieldServer: BaseFieldServer() {
     private val aliceSessionKeyDeferred = CompletableDeferred<BigInteger>()
     private val bobSessionKeyDeferred = CompletableDeferred<BigInteger>()
     private val q: BigInteger = generatePrime(256)

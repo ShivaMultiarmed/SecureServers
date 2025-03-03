@@ -8,7 +8,7 @@ import io.ktor.server.websocket.*
 import io.ktor.websocket.*
 import java.time.Duration
 
-class DFServer: BaseServer() {
+class DFFieldServer: BaseFieldServer() {
     init {
         p = generatePrime(1024)
         g = findGenerator(p)

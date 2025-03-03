@@ -5,7 +5,7 @@ import kotlinx.coroutines.CompletableDeferred
 import java.math.BigInteger
 import java.nio.ByteBuffer
 
-abstract class BaseServer: Server {
+abstract class BaseFieldServer: Server {
     protected lateinit var p: BigInteger
     protected lateinit var g: BigInteger
     protected var X: BigInteger? = null

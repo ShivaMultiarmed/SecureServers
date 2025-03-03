@@ -9,10 +9,10 @@ fun main(args: Array<String>) {
             "--mqv" -> type = Protocol.MQV
         }
     }
-    val server: BaseServer = when(type) {
-        Protocol.DEFFIE_HELLMAN -> DFServer()
-        Protocol.DEFFIE_HELLMAN_IMPROVED -> DFIServer()
-        else -> MQVServer()
+    val server: BaseFieldServer = when(type) {
+        Protocol.DEFFIE_HELLMAN -> DFFieldServer()
+        Protocol.DEFFIE_HELLMAN_IMPROVED -> DFIFieldServer()
+        else -> MQVFieldServer()
     }
     server.start()
 }

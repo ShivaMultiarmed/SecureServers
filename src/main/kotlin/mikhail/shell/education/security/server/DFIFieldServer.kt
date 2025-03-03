@@ -9,7 +9,7 @@ import io.ktor.websocket.*
 import java.math.BigInteger
 import java.time.Duration
 
-class DFIServer: BaseServer() {
+class DFIFieldServer: BaseFieldServer() {
     private val q: BigInteger = generatePrime(256)
     init {
         p = generateSafePrime(q)
