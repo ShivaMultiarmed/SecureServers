@@ -24,15 +24,23 @@ class DiffieHellmanEllipticServer: BaseEllipticServer() {
                     sendNumber(xG)
                     sendNumber(yG)
                     if (clientName == "CATHY") {
-                        C = receivePublicKey()
-                        cathyDeferred.complete(C!!)
-                        F = fredDeferred.await()
-                        sendNumber(F!!)
+                        xC = receivePublicKey()
+                        xCathyDeferred.complete(xC!!)
+                        yC = receivePublicKey()
+                        yCathyDeferred.complete(yC!!)
+                        xF = xFredDeferred.await()
+                        sendNumber(xF!!)
+                        yF = yFredDeferred.await()
+                        sendNumber(yF!!)
                     } else if (clientName == "FRED") {
-                        F = receivePublicKey()
-                        fredDeferred.complete(F!!)
-                        C = cathyDeferred.await()
-                        sendNumber(C!!)
+                        xF = receivePublicKey()
+                        xFredDeferred.complete(xF!!)
+                        yC = receivePublicKey()
+                        yCathyDeferred.complete(yF!!)
+                        xC = xCathyDeferred.await()
+                        sendNumber(xC!!)
+                        yC = yCathyDeferred.await()
+                        sendNumber(yC!!)
                     }
                 }
             }
