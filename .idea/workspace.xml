@@ -70,6 +70,7 @@
   "keyToString": {
     "Gradle.Build SecureServer.executor": "Run",
     "Gradle.EllipticFunctionsTests.testComposition.executor": "Debug",
+    "Gradle.EllipticFunctionsTests.testDiffieHellmanEllipticKeyGeneration.executor": "Debug",
     "Gradle.EllipticFunctionsTests.testGetNthBit.executor": "Debug",
     "Gradle.EllipticFunctionsTests.testMultipleComposition.executor": "Debug",
     "Kotlin.MainKt.executor": "Debug",

@@ -6,12 +6,14 @@ import java.math.BigInteger
 import java.nio.ByteBuffer
 
 abstract class BaseEllipticServer: Server {
-    private val p = BigInteger("115792089210356248762697446949407573530086143415290314195533631308867097853951")
-    private val a = BigInteger("-3")
-    private val b = BigInteger("0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b", 16)
-    private val q = BigInteger("115792089210356248762697446949407573529996955224135760342422259061068512044369")
-    private val xG = BigInteger("0x6b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c296", 16)
-    private val yG = BigInteger("0x4fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5", 16)
+    protected val p = BigInteger("115792089210356248762697446949407573530086143415290314195533631308867097853951")
+    protected val a = BigInteger("-3")
+    protected val b = BigInteger("0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b", 16)
+    protected val q = BigInteger("115792089210356248762697446949407573529996955224135760342422259061068512044369")
+    protected val xG = BigInteger("0x6b17d1f2e12c4247f8bce6e563a440f277037d812deb33a0f4a13945d898c296", 16)
+    protected val yG = BigInteger("0x4fe342e2fe1a7f9b8ee7eb4a7c0f9e162bce33576b315ececbb6406837bf51f5", 16)
+    var C: BigInteger? = null
+    var F: BigInteger? = null
     val cathyDeferred = CompletableDeferred<BigInteger>()
     val fredDeferred = CompletableDeferred<BigInteger>()
 

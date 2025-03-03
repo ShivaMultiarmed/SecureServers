@@ -23,20 +23,15 @@ class DFIFieldServer: BaseFieldServer() {
             routing {
                 webSocket("/handshake") {
                     val clientName = (incoming.receive() as Frame.Text).readText()
+                    sendNumber(q)
+                    sendNumber(p)
+                    sendNumber(g)
                     if (clientName == "ALICE") {
-                        sendNumber(q)
-                        sendNumber(p)
-                        sendNumber(g)
-
                         X = receivePublicKey()
                         aliceKeyDeferred.complete(X!!)
                         Y = bobKeyDeferred.await()
                         sendNumber(Y!!)
                     } else if (clientName == "BOB") {
-                        sendNumber(q)
-                        sendNumber(p)
-                        sendNumber(g)
-
                         Y = receivePublicKey()
                         bobKeyDeferred.complete(Y!!)
                         X = aliceKeyDeferred.await()

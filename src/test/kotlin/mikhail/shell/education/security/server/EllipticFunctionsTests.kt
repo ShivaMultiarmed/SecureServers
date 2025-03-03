@@ -23,7 +23,6 @@ class EllipticFunctionsTests {
         val actual = a.evaluateComposition(b, BigInteger("7"))
         Assertions.assertEquals(expected, actual)
     }
-
     @Test
     fun testMultipleComposition() {
         val n = BigInteger("3")
@@ -32,7 +31,6 @@ class EllipticFunctionsTests {
         val actual = point.evaluateComposition(n, BigInteger("7"), BigInteger("2"))
         Assertions.assertEquals(expected, actual)
     }
-
     @Test
     fun testDiffieHellmanEllipticKeyGeneration() {
         val p = BigInteger("115792089210356248762697446949407573530086143415290314195533631308867097853951")
