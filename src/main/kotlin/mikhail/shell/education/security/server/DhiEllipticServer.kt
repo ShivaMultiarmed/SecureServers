@@ -8,7 +8,7 @@ import io.ktor.server.websocket.*
 import io.ktor.websocket.*
 import java.time.Duration
 
-class DiffieHellmanEllipticServer: BaseEllipticServer() {
+class DhiEllipticServer: BaseEllipticServer() {
     override fun start() {
         embeddedServer(Netty, port = 9876) {
             install(WebSockets.Plugin) {
@@ -26,19 +26,19 @@ class DiffieHellmanEllipticServer: BaseEllipticServer() {
                     if (clientName == "CATHY") {
                         xC = receivePublicKey()
                         yC = receivePublicKey()
-                        xCathyDeferred.complete(xC!!)
-                        yCathyDeferred.complete(yC!!)
-                        xF = xFredDeferred.await()
-                        yF = yFredDeferred.await()
+                        xCdef.complete(xC!!)
+                        yCdef.complete(yC!!)
+                        xF = xFdef.await()
+                        yF = yFdef.await()
                         sendNumber(xF!!)
                         sendNumber(yF!!)
                     } else if (clientName == "FRED") {
                         xF = receivePublicKey()
                         yF = receivePublicKey()
-                        xFredDeferred.complete(xF!!)
-                        yFredDeferred.complete(yF!!)
-                        xC = xCathyDeferred.await()
-                        yC = yCathyDeferred.await()
+                        xFdef.complete(xF!!)
+                        yFdef.complete(yF!!)
+                        xC = xCdef.await()
+                        yC = yCdef.await()
                         sendNumber(xC!!)
                         sendNumber(yC!!)
                     }

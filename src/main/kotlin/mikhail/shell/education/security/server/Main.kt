@@ -16,9 +16,12 @@ fun main(args: Array<String>) {
         Protocol.DEFFIE_HELLMAN -> DFFieldServer()
         Protocol.DEFFIE_HELLMAN_IMPROVED -> when(subType) {
             MathType.ALGEBRAIC -> DFIFieldServer()
-            MathType.ELLIPTIC -> DiffieHellmanEllipticServer()
+            MathType.ELLIPTIC -> DhiEllipticServer()
         }
-        else -> MQVFieldServer()
+        Protocol.MQV -> when(subType) {
+            MathType.ALGEBRAIC -> MQVFieldServer()
+            MathType.ELLIPTIC -> MqvEllipticServer()
+        }
     }
     server.start()
 }

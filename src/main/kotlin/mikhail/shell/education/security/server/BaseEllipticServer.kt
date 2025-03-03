@@ -16,10 +16,10 @@ abstract class BaseEllipticServer: Server {
     var yC: BigInteger? = null
     var xF: BigInteger? = null
     var yF: BigInteger? = null
-    val xCathyDeferred = CompletableDeferred<BigInteger>()
-    val yCathyDeferred = CompletableDeferred<BigInteger>()
-    val xFredDeferred = CompletableDeferred<BigInteger>()
-    val yFredDeferred = CompletableDeferred<BigInteger>()
+    val xCdef = CompletableDeferred<BigInteger>()
+    val yCdef = CompletableDeferred<BigInteger>()
+    val xFdef = CompletableDeferred<BigInteger>()
+    val yFdef = CompletableDeferred<BigInteger>()
 
     protected suspend fun WebSocketSession.receivePublicKey(): BigInteger {
         return BigInteger((incoming.receive() as Frame.Binary).readBytes())
