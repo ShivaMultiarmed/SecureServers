@@ -7,12 +7,7 @@
     <list default="true" id="12e590b3-a163-4167-bb71-68506852a43e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/BaseEllipticServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/BaseEllipticServer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/BaseServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/BaseFieldServer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/DFIFieldServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/DFIFieldServer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/DFServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/DFFieldServer.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/DiffieHellmanEllipticServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/DiffieHellmanEllipticServer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/Functions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/Functions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/MQVServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/MQVFieldServer.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/mikhail/shell/education/security/server/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/mikhail/shell/education/security/server/EllipticFunctionsTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/mikhail/shell/education/security/server/EllipticFunctionsTests.kt" afterDir="false" />
     </list>
@@ -77,7 +72,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Магистратура/2 семестр/Перспективные технологии защиты информации/Practice 1/SecureServer"
+    "last_opened_file_path": "D:/Магистратура/2 семестр/Перспективные технологии защиты информации/Practice 1/SecureClient"
   },
   "keyToStringList": {
     "kotlin-gradle-user-dirs": [
@@ -85,7 +80,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.EllipticFunctionsTests.testDiffieHellmanEllipticKeyGeneration">
+  <component name="RunManager">
     <configuration name="EllipticFunctionsTests.testComposition" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />

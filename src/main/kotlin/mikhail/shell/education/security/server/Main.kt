@@ -2,20 +2,29 @@ package mikhail.shell.education.security.server
 
 fun main(args: Array<String>) {
     var type = Protocol.DEFFIE_HELLMAN
+    var subType = MathType.ALGEBRAIC
     for (i in 0..<args.size) {
         when (args[i]) {
-            "--df" -> type = Protocol.DEFFIE_HELLMAN
-            "--dfi" -> type = Protocol.DEFFIE_HELLMAN_IMPROVED
+            "--dh" -> type = Protocol.DEFFIE_HELLMAN
+            "--dhi" -> type = Protocol.DEFFIE_HELLMAN_IMPROVED
             "--mqv" -> type = Protocol.MQV
+            "--alg" -> subType = MathType.ALGEBRAIC
+            "--el" -> subType = MathType.ELLIPTIC
         }
     }
-    val server: BaseFieldServer = when(type) {
+    val server: Server = when(type) {
         Protocol.DEFFIE_HELLMAN -> DFFieldServer()
-        Protocol.DEFFIE_HELLMAN_IMPROVED -> DFIFieldServer()
+        Protocol.DEFFIE_HELLMAN_IMPROVED -> when(subType) {
+            MathType.ALGEBRAIC -> DFIFieldServer()
+            MathType.ELLIPTIC -> DiffieHellmanEllipticServer()
+        }
         else -> MQVFieldServer()
     }
     server.start()
 }
 enum class Protocol {
     DEFFIE_HELLMAN, DEFFIE_HELLMAN_IMPROVED, MQV
+}
+enum class MathType {
+    ALGEBRAIC, ELLIPTIC
 }

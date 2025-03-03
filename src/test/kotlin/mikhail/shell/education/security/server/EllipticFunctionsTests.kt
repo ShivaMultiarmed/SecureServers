@@ -48,10 +48,10 @@ class EllipticFunctionsTests {
         val F = G.evaluateComposition(f, p, a)
         println("C = $C")
         println("F = $F")
-        val Sc = C.evaluateComposition(f, p, a)
-        val Sf = F.evaluateComposition(c, p, a)
-        println("Sc = $Sc")
+        val Sf = C.evaluateComposition(f, p, a)
+        val Sc = F.evaluateComposition(c, p, a)
         println("Sf = $Sf")
+        println("Sc = $Sc")
         Assertions.assertEquals(Sc, Sf)
     }
 }
