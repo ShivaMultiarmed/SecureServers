@@ -20,7 +20,9 @@ class EStreamServer: Server {
             factory = Netty,
             port = 9999
         ) {
-            install(WebSockets)
+            install(WebSockets) {
+                masking = false
+            }
             routing {
                 webSocket("/transfer") {
                     if (!sessions.contains(this) && sessions.size < 2) {
@@ -41,7 +43,9 @@ class EStreamServer: Server {
                         anotherSession.send(fileNameFrame)
                         var bytesLeft = fileSize
                         while (bytesLeft > 0) {
-                            val byteFrame = incoming.receive() as Frame.Binary
+                            val ivFrame = incoming.receive()
+                            val byteFrame = incoming.receive()
+                            anotherSession.outgoing.send(ivFrame)
                             anotherSession.outgoing.send(byteFrame)
                             bytesLeft -= BUFFER_SIZE
                         }
