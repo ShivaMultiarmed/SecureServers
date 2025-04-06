@@ -1,4 +1,4 @@
-package mikhail.shell.education.security.server
+package mikhail.shell.education.security.server.estream
 
 import io.ktor.server.application.*
 import io.ktor.server.engine.*
@@ -7,6 +7,8 @@ import io.ktor.server.routing.*
 import io.ktor.server.websocket.*
 import io.ktor.websocket.*
 import kotlinx.coroutines.delay
+import mikhail.shell.education.security.server.Server
+import org.slf4j.event.Level
 
 class EStreamServer: Server {
     private companion object {
@@ -46,6 +48,6 @@ class EStreamServer: Server {
                     }
                 }
             }
-        }
+        }.start(wait = true)
     }
 }
