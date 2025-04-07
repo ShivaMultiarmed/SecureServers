@@ -1,3 +1,5 @@
+import org.gradle.api.file.DuplicatesStrategy.EXCLUDE
+
 plugins {
     kotlin("jvm") version "2.0.0"
     application
@@ -38,4 +40,23 @@ tasks.test {
 }
 kotlin {
     jvmToolchain(17)
+}
+
+tasks.create<Jar>("estream") {
+    archiveFileName = "estream-server.jar"
+    manifest {
+        attributes(
+            "Main-Class" to "mikhail.shell.education.security.server.estream.MainKt"
+        )
+    }
+    from(sourceSets.main.get().output) {
+        include("mikhail/shell/education/security/server/**")
+    }
+    dependsOn(configurations.runtimeClasspath)
+    duplicatesStrategy = EXCLUDE
+    from(
+        {
+            configurations.runtimeClasspath.get().filter { it.exists() }.map { zipTree(it) }
+        }
+    )
 }

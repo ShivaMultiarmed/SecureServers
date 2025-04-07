@@ -7,8 +7,8 @@ import io.ktor.server.routing.*
 import io.ktor.server.websocket.*
 import io.ktor.websocket.*
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
 import mikhail.shell.education.security.server.Server
-import org.slf4j.event.Level
 
 class EStreamServer: Server {
     private companion object {
@@ -48,6 +48,11 @@ class EStreamServer: Server {
                             anotherSession.outgoing.send(ivFrame)
                             anotherSession.outgoing.send(byteFrame)
                             bytesLeft -= BUFFER_SIZE
+                        }
+                        sessions.forEach {
+                            if (!it.isActive) {
+                                sessions.remove(it)
+                            }
                         }
                     }
                 }
