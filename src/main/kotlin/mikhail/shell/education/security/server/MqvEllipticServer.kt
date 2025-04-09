@@ -22,7 +22,7 @@ open class MqvEllipticServer: BaseEllipticServer() {
     val yVdef = CompletableDeferred<BigInteger>()
     protected val userIDset = mutableSetOf<String>()
     override fun start() {
-        embeddedServer(Netty, port = 9876){
+        embeddedServer(Netty, port = 9876, host = "0.0.0.0"){
             install(WebSockets.Plugin) {
                 pingPeriod = Duration.ofSeconds(10)
             }
